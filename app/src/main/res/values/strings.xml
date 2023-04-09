@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">com.rollonit.convert.Convert</string>
     <string name="convert">Convert</string>
+    <string name="value_1">Value 1</string>
+    <string name="value_2">Value 2</string>
+    <string-array name="unit_array">
+        <item>meters</item>
+        <item>feet</item>
+        <item>kilometers</item>
+    </string-array>
+
 </resources>
