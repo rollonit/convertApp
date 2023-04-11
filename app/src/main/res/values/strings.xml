@@ -5,7 +5,7 @@
     <string name="value_2">Value 2</string>
     <string name="convertButton">Convert</string>
     <string name="default_value">0</string>
-    <string-array name="unit_array">
+    <string-array name="length_units">
         <item>Millimeters</item>
         <item>Centimeters</item>
         <item>Meters</item>
@@ -15,6 +15,39 @@
         <item>Yards</item>
         <item>Miles</item>
         <item>Nautical Miles</item>
+    </string-array>
+    <string-array name="weight_units">
+        <item>Milligrams</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+    </string-array>
+    <string-array name="volume_units">
+        <item>Milliliters</item>
+        <item>Liters</item>
+        <item>Fluid Ounces</item>
+        <item>Cups</item>
+        <item>Pints</item>
+        <item>Quarts</item>
+        <item>Gallons</item>
+        <item>Tablespoons</item>
+        <item>Teaspoons</item>
+    </string-array>
+    <string-array name="temperature_units">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="time_units">
+        <item>Milliseconds</item>
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Months</item>
+        <item>Years</item>
     </string-array>
 
 </resources>
