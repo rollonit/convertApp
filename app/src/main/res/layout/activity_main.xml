@@ -20,24 +20,29 @@
             android:id="@+id/input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
-            android:inputType="numberDecimal"
-            android:text="@string/default_value"
+            android:autofillHints="firstValue"
+            android:backgroundTint="?attr/colorOnPrimary"
+            android:fontFamily="@font/cascadia_code"
             android:hint="@string/value_1"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text="@string/default_value"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spinner"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            android:autofillHints="firstValue"
-            android:maxLines="1"
-            android:scrollHorizontally="true"/>
+            app:layout_constraintVertical_bias="0.5" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:fontFamily="@font/cascadia_code"
+            android:textColor="?attr/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="@+id/input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -48,17 +53,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="?attr/colorSecondary"
+        android:background="?attr/colorOnPrimary"
         android:padding="16dp">
 
         <EditText
             android:id="@+id/output"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
+            android:fontFamily="@font/cascadia_code"
+            android:hint="@string/value_2"
             android:inputType="numberDecimal"
-            android:hint="@string/value_1"
             android:text="@string/default_value"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spinner2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -70,10 +77,21 @@
             android:id="@+id/spinner2"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:fontFamily="@font/cascadia_code"
+            android:textColor="?attr/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="@+id/output"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/output" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/colorOnPrimary"
+        android:padding="16dp">
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

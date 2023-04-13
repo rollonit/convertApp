@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">com.rollonit.convert.Convert</string>
     <string name="convert">Convert</string>
-    <string name="value_1">Value 1</string>
-    <string name="value_2">Value 2</string>
+    <string name="value_1">Input</string>
+    <string name="value_2">Output</string>
     <string name="convertButton">Convert</string>
     <string name="default_value">0</string>
     <string-array name="length_units">
