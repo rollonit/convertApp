@@ -4,7 +4,7 @@
 
 ### By: **Rohan Pradyumna Gundala**
 
-This is the submission for the first assignment (Utility App) of CP3409 mobile computing class.
+This is the submission for the first assignment (Utility App) of the CP3406 mobile computing class.
 
 I accidentally set the API level to _31 (Android 12.0)_. This is way too new, but I was unable
 to change it later without breaking everything. I apologise, and I hope it's not too much trouble.
