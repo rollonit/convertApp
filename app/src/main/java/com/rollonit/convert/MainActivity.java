@@ -1,5 +1,6 @@
 package com.rollonit.convert;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.nav_open, R.string.nav_close);
-
+        toggle.getDrawerArrowDrawable().setColor(Color.BLACK);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
