@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
+    android:fontFamily="@font/cascadia_code"
     android:maxLines="1"
     android:textColor="?attr/colorPrimary"
-    android:textSize="40sp" />
+    android:textSize="@dimen/spinner_item_text_size" />

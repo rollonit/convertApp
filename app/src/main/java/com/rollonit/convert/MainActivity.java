@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         // Setup for first input value selector
-        s1 = findViewById(R.id.spinner);
+        s1 = findViewById(R.id.spinner_input_length);
 
         final CharSequence[] unit_strings = getResources().getTextArray(R.array.length_units);
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         s1.setOnItemSelectedListener(this);
 
         // Setup for second input value selector
-        s2 = findViewById(R.id.spinner2);
+        s2 = findViewById(R.id.spinner_output_length);
 
         ArrayAdapter<CharSequence> aa2 = new ArrayAdapter<CharSequence>(this, R.layout.spinner_item, unit_strings) {
             @androidx.annotation.NonNull
@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         s2.setOnItemSelectedListener(this);
 
         //setup for unit conversion text fields
-        e1 = findViewById(R.id.input);
-        e2 = findViewById(R.id.output);
+        e1 = findViewById(R.id.input_length);
+        e2 = findViewById(R.id.output_length);
 
         // Handle events from the text fields
         e1.addTextChangedListener(new TextWatcher() {

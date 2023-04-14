@@ -2,10 +2,11 @@
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
+    android:layout_height="@dimen/spinner_dropdown_item_height"
 
     android:gravity="center"
     android:maxLines="1"
-    android:paddingStart="12dp"
-    android:paddingEnd="10dp"
-    android:textSize="20sp" />
+
+    android:paddingStart="@dimen/spinner_start_padding"
+    android:paddingEnd="@dimen/spinner_end_padding"
+    android:textSize="@dimen/spinner_dropdown_text_size" />

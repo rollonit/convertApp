@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="unit_box_padding">16dp</dimen>
+    <dimen name="spinner_item_text_size">40sp</dimen>
+    <dimen name="spinner_dropdown_text_size">20sp</dimen>
+    <dimen name="spinner_dropdown_item_height">48dp</dimen>
+    <dimen name="spinner_start_padding">12dp</dimen>
+    <dimen name="spinner_end_padding">10dp</dimen>
+    <dimen name="unit_text_size">50sp</dimen>
+    <dimen name="spinner_height_offset">15dp</dimen>
+</resources>
