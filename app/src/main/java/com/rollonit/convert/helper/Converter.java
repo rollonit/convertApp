@@ -435,4 +435,92 @@ public final class Converter {
 
         return 0;
     }
+
+    /**
+     * This method is used to convert the long string resource name to a short unit name.
+     * For example, "Millimeters" becomes "mm".
+     * The text must be one of the values in the android unit string arrays in strings.xml.
+     * If the text does not match any of the above, null is returned.
+     * If the text is null or empty, null is returned.
+     * If the text is not null or empty, but does not match any of the above, null is returned.
+     *
+     * @param text The long string resource name.
+     * @return The short unit name.
+     */
+    public static String getShortName(String text) {
+        if (text == null || text.isEmpty()) {
+            return null;
+        }
+
+        switch (text) {
+            case "Meters":
+                return "m";
+            case "Kilometers":
+                return "km";
+            case "Centimeters":
+                return "cm";
+            case "Millimeters":
+                return "mm";
+            case "Miles":
+                return "mi";
+            case "Yards":
+                return "yd";
+            case "Feet":
+                return "ft";
+            case "Inches":
+                return "in";
+            case "Nautical Miles":
+                return "NM";
+            case "Grams":
+                return "g";
+            case "Kilograms":
+                return "kg";
+            case "Milligrams":
+                return "mg";
+            case "Ounces":
+                return "oz";
+            case "Pounds":
+                return "lb";
+            case "Liters":
+                return "l";
+            case "Milliliters":
+                return "ml";
+            case "Gallons":
+                return "gal";
+            case "Quarts":
+                return "qt";
+            case "Pints":
+                return "pt";
+            case "Fluid Ounces":
+                return "fl oz";
+            case "Cups":
+                return "cup";
+            case "Tablespoons":
+                return "tbsp";
+            case "Teaspoons":
+                return "tsp";
+            case "Celsius":
+                return "°C";
+            case "Fahrenheit":
+                return "°F";
+            case "Kelvin":
+                return "K";
+            case "Seconds":
+                return "s";
+            case "Minutes":
+                return "min";
+            case "Hours":
+                return "hr";
+            case "Days":
+                return "d";
+            case "Weeks":
+                return "wk";
+            case "Months":
+                return "mo";
+            case "Years":
+                return "yr";
+            default:
+                return null;
+        }
+    }
 }

@@ -2,15 +2,18 @@ package com.rollonit.convert;
 
 import static com.rollonit.convert.helper.Converter.convert;
 import static com.rollonit.convert.helper.Converter.convertTextToUnit;
+import static com.rollonit.convert.helper.Converter.getShortName;
 
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,16 +44,60 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Setup for first input value selector
         s1 = findViewById(R.id.spinner);
 
-        ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.length_units, android.R.layout.simple_spinner_item);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        final CharSequence[] unit_strings = getResources().getTextArray(R.array.length_units);
+
+        ArrayAdapter<CharSequence> aa = new ArrayAdapter<CharSequence>(this, R.layout.spinner_color_item, unit_strings) {
+            @androidx.annotation.NonNull
+            @Override
+            public View getView(int position, View convertView, @androidx.annotation.NonNull ViewGroup parent) {
+                final View view;
+                final TextView text;
+
+                if (convertView == null) {
+                    view = getLayoutInflater().inflate(R.layout.spinner_color_item, parent, false);
+                } else {
+                    view = convertView;
+                }
+
+                text = (TextView) view;
+
+                final String item = (String) getItem(position);
+                if (item != null) {
+                    text.setText(getShortName(item));
+                }
+                return view;
+            }
+        };
+        aa.setDropDownViewResource(R.layout.spinner_dropdown_item);
         s1.setAdapter(aa);
         s1.setOnItemSelectedListener(this);
 
         // Setup for second input value selector
         s2 = findViewById(R.id.spinner2);
 
-        ArrayAdapter<CharSequence> aa2 = ArrayAdapter.createFromResource(this, R.array.length_units, android.R.layout.simple_spinner_item);
-        aa2.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> aa2 = new ArrayAdapter<CharSequence>(this, R.layout.spinner_item, unit_strings) {
+            @androidx.annotation.NonNull
+            @Override
+            public View getView(int position, View convertView, @androidx.annotation.NonNull ViewGroup parent) {
+                final View view;
+                final TextView text;
+
+                if (convertView == null) {
+                    view = getLayoutInflater().inflate(R.layout.spinner_item, parent, false);
+                } else {
+                    view = convertView;
+                }
+
+                text = (TextView) view;
+
+                final String item = (String) getItem(position);
+                if (item != null) {
+                    text.setText(getShortName(item));
+                }
+                return view;
+            }
+        };
+        aa2.setDropDownViewResource(R.layout.spinner_dropdown_item);
         s2.setAdapter(aa2);
         s2.setOnItemSelectedListener(this);
 
