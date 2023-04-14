@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -169,21 +168,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if (parent.getId() == R.id.spinner) {
-            // Handle event from the first spinner
-            String selectedItem1 = parent.getItemAtPosition(position).toString();
-            updateTextFields();
-
-            // for debugging TODO remove later
-            Toast.makeText(getApplicationContext(), "Selected item in spinner 1: " + selectedItem1 + " and the enum equivalent is " + convertTextToUnit(selectedItem1), Toast.LENGTH_SHORT).show();
-        } else if (parent.getId() == R.id.spinner2) {
-            // Handle event from the second spinner
-            String selectedItem2 = parent.getItemAtPosition(position).toString();
-            updateTextFields();
-
-            // for debugging TODO remove later
-            Toast.makeText(getApplicationContext(), "Selected item in spinner 2: " + selectedItem2, Toast.LENGTH_SHORT).show();
-        }
+        updateTextFields();
     }
 
     /**
