@@ -72,7 +72,7 @@ public class TemperatureFragment extends Fragment implements AdapterView.OnItemS
         s1.setOnItemSelectedListener(this);
 
         // Setup for second input value selector
-        s2 = view.findViewById(R.id.spinner_output_temerature);
+        s2 = view.findViewById(R.id.spinner_output_temperature);
 
         ArrayAdapter<CharSequence> aa2 = new ArrayAdapter<CharSequence>(this.getContext(), R.layout.spinner_item, unit_strings) {
             @androidx.annotation.NonNull
