@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_length"
+        android:title="@string/length_title" />
+    <item
+        android:id="@+id/menu_item_weight"
+        android:title="@string/weight_title" />
+    <item
+        android:id="@+id/menu_item_temperature"
+        android:title="@string/temperature_title" />
+    <item
+        android:id="@+id/menu_item_volume"
+        android:title="@string/volume_title" />
+    <item
+        android:id="@+id/menu_item_time"
+        android:title="@string/time_title" />
+</menu>

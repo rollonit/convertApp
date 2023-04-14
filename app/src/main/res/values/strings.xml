@@ -5,6 +5,11 @@
     <string name="value_2">Output</string>
     <string name="convertButton">Convert</string>
     <string name="default_value">0</string>
+    <string name="length_title">Length</string>
+    <string name="weight_title">Weight</string>
+    <string name="temperature_title">Temperature</string>
+    <string name="volume_title">Volume</string>
+    <string name="time_title">Time</string>
     <string-array name="length_units">
         <item>Millimeters</item>
         <item>Centimeters</item>
@@ -49,5 +54,4 @@
         <item>Months</item>
         <item>Years</item>
     </string-array>
-
 </resources>

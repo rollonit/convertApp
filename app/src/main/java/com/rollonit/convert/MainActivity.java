@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ui.AppBarConfiguration;
 
 import com.rollonit.convert.helper.Unit;
 
@@ -26,6 +27,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
+    private AppBarConfiguration appBarConfiguration;
     EditText e1, e2;
     Spinner s1, s2;
 

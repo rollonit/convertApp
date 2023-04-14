@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Length"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:background="?attr/colorPrimary"
+        android:padding="@dimen/unit_box_padding">
+
+        <EditText
+            android:id="@+id/input_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="firstValue"
+            android:backgroundTint="?attr/colorOnPrimary"
+            android:fontFamily="@font/cascadia_code"
+            android:hint="@string/value_1"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text="@string/default_value"
+            android:textColor="?attr/colorOnPrimary"
+            android:textCursorDrawable="@drawable/color_onprimary_cursor"
+            android:textSize="@dimen/unit_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_input_length"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Spinner
+            android:id="@+id/spinner_input_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spinner_height_offset"
+            android:fontFamily="@font/cascadia_code"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/input_length"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_length" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/colorOnPrimary"
+        android:padding="@dimen/unit_box_padding">
+
+        <EditText
+            android:id="@+id/output_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cascadia_code"
+            android:hint="@string/value_2"
+            android:inputType="numberDecimal"
+            android:text="@string/default_value"
+            android:textColor="?attr/colorPrimary"
+            android:textCursorDrawable="@drawable/color_primary_cursor"
+            android:textSize="@dimen/unit_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_output_length"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Spinner
+            android:id="@+id/spinner_output_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spinner_height_offset"
+            android:fontFamily="@font/cascadia_code"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/output_length"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/output_length" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/colorOnPrimary"
+        android:padding="@dimen/unit_box_padding">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
