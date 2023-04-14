@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (!e2.hasFocus()) {
+                if (!e2.hasFocus() && e1.hasFocus()) {
                     try {
                         if (e1.getText().toString().equals("")) {
                             e2.setText("");
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (!e1.hasFocus()) {
+                if (!e1.hasFocus() && e2.hasFocus()) {
                     try {
                         if (e2.getText().toString().equals("")) {
                             e1.setText("0");
@@ -172,16 +172,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (parent.getId() == R.id.spinner) {
             // Handle event from the first spinner
             String selectedItem1 = parent.getItemAtPosition(position).toString();
+            updateTextFields();
 
             // for debugging TODO remove later
             Toast.makeText(getApplicationContext(), "Selected item in spinner 1: " + selectedItem1 + " and the enum equivalent is " + convertTextToUnit(selectedItem1), Toast.LENGTH_SHORT).show();
         } else if (parent.getId() == R.id.spinner2) {
             // Handle event from the second spinner
             String selectedItem2 = parent.getItemAtPosition(position).toString();
+            updateTextFields();
 
             // for debugging TODO remove later
             Toast.makeText(getApplicationContext(), "Selected item in spinner 2: " + selectedItem2, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     * This method assigns each text field's value to itself to run the convert logic again.
+     */
+    private void updateTextFields() {
+        e1.setText(e1.getText().toString());
+        e2.setText(e2.getText().toString());
     }
 
     @Override
