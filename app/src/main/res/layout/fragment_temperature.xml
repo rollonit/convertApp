@@ -17,7 +17,7 @@
         android:padding="@dimen/unit_box_padding">
 
         <EditText
-            android:id="@+id/input_temerature"
+            android:id="@+id/input_temperature"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:autofillHints="firstValue"
@@ -32,23 +32,23 @@
             android:textCursorDrawable="@drawable/color_onprimary_cursor"
             android:textSize="@dimen/unit_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner_input_temerature"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_input_temperature"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
 
         <Spinner
-            android:id="@+id/spinner_input_temerature"
+            android:id="@+id/spinner_input_temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/spinner_height_offset"
             android:fontFamily="@font/cascadia_code"
             android:spinnerMode="dialog"
-            app:layout_constraintBottom_toBottomOf="@+id/input_temerature"
+            app:layout_constraintBottom_toBottomOf="@+id/input_temperature"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/input_temerature" />
+            app:layout_constraintStart_toEndOf="@+id/input_temperature" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -505,6 +505,8 @@ public final class Converter {
                 return "°F";
             case "Kelvin":
                 return "K";
+            case "Milliseconds":
+                return "ms";
             case "Seconds":
                 return "s";
             case "Minutes":

@@ -10,6 +10,8 @@
     <string name="temperature_title">Temperature</string>
     <string name="volume_title">Volume</string>
     <string name="time_title">Time</string>
+    <string name="nav_open">Open Navbar</string>
+    <string name="nav_close">Close Navbar</string>
     <string-array name="length_units">
         <item>Millimeters</item>
         <item>Centimeters</item>
